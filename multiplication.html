@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addition.css">
+    <style>
+        body{
+    background-image: linear-gradient(to left,red,blue);
+}
+.heading
+{
+    text-align: center;
+    color: orangered;
+}
+
+.mul
+{
+    background-color: rgb(140, 116, 116);
+    height: 70vh;
+    width: 80vh;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#box1
+{
+    background-color: azure;
+    border-color: blue;
+    padding: 13px;
+    border-radius: 12px;
+    margin-top: 15%;
+}
+
+#box2
+{
+    background-color: azure;
+    border-color: blue;
+    padding: 13px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+level{
+    color: white;
+    font-size: 26px;
+}
+
+ #result
+ {
+    background-color: azure;
+    border-color: blue;
+    padding: 13px;
+    border-radius: 12px;
+    margin-top: 10px;
+ }
+
+ #res
+ {
+    background-color: green;
+    padding: 14px;
+    width: 90px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-family: 'Gill Sans';
+    font-weight: 100;
+    font-size: large;
+    color: white;
+    border: none;
+    cursor: pointer;
+ }
+
+ #res:hover{
+    color: orangered;
+    background-color: lightgreen;
+    transition: 0.9s;
+ }
+
+ .return
+ {
+
+    background-color: red;
+    color: white;
+    margin-top: 12vh;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+ }
+
+ .return:hover
+ {
+    color: rgb(101, 37, 37);
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+    </style>
+</head>
+<script>
+    function mul()
+    {
+        let a = document.getElementById('box1').value;
+        let b = document.getElementById('box2').value;
+        let c = Number(a) * Number(b);
+        document.getElementById('result').value = c;
+    }
+</script>
+<body>
+    <h1 class="heading">Multiplication of two Numbers</h1>
+    <center>
+    <div class="mul">
+        <input type="text" id="box1"><br>
+        <level>*</level><br>
+        <input type="text" id="box2"><br>
+        <level>=</level><br>
+        <input type="text" id="result"readonly><br>
+        <button id="res" onclick="mul()">Multiply</button><br>
+        <a href="main.html"><button class="return">Return Home</button></a>
+    </div>
+    </center>
+</body>
+</html>
